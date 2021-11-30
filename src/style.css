@@ -1,14 +1,17 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+}
 h1 {
     box-sizing: border-box;
     color: rgb(62, 111, 170);
     display: block;
     flex-shrink: 0;
-    font-size: 37.794px;
+    font-size: 38px;
     font-weight: 300px;
-    height: 45.3438px;
-    line-height:45.3528px;
+    height: 45px;
+    line-height:45px;
     padding: 0px 12px 0px 12px;
-    margin: 0;
+    margin: 0px 0px 10px 0px;
     text-align: start;
     text-size-adjust: 100%;
     width: 444px;
@@ -18,8 +21,20 @@ h1 {
     border-radius: 16px;
     box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
     color: #878787;
-    font-family: "Josefin Sans", sans-serif;
     margin: 30px auto;
     max-width: 500px; 
     padding: 40px;   
+}
+ul {
+    padding: 0px 12px 0px 12px;
+    margin: 0;
+}
+li {
+    color: rgb(62, 111, 170);
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    list-style: none;
+    margin-bottom: 5px;
 }
