@@ -11,6 +11,7 @@
 <body>
  <div class="container">
      <div class="weather-app">
+         <div class="overview">
     <hr />
     <h1>
         London
@@ -24,11 +25,19 @@
             Scattered Clouds
         </li>
     </ul>
+    </div>
     <div class="row">
         <div class="col-6">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/931/original/sunny.png?1638278675" 
-            alt="sun-illustration"/>
-            12°C | °F 
+         <div class="clearfix weather-temperature">
+            <img 
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/931/original/sunny.png?1638278675" 
+              alt="sun-illustration"
+              class="float-left"
+            />
+            <span class="class float-left">
+             <strong>12</strong><span class="units">°C | <a href="#" class="imperial-unit">°F</a></span> 
+            </span>
+         </div> 
         </div>
         <div class="col-6">
             <ul>
