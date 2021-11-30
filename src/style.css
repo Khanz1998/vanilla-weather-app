@@ -30,6 +30,10 @@ li {
     line-height: 24px;
     list-style: none;
     margin-bottom: 5px;
+    text-transform: lowercase;
+}
+li:first-letter {
+    text-transform: uppercase;
 }
 small {
     font-family: "Courier New", Courier, monospace;
