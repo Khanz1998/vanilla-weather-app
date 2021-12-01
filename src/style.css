@@ -30,11 +30,11 @@ li {
     line-height: 24px;
     list-style: none;
     margin-bottom: 5px;
-    text-transform: lowercase;
 }
 li:first-letter {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
+
 small {
     font-family: "Courier New", Courier, monospace;
     font-size: 11px;
@@ -43,6 +43,7 @@ small {
     line-height: 10px;
     text-align: center;
 }
+
 .weather-app {
     background: radial-gradient(263px at 100.2% 3%, rgb(12, 85, 141) 31.1%, rgb(205, 181, 93) 36.4%, rgb(244, 102, 90) 50.9%, rgb(199, 206, 187) 60.7%, rgb(249, 140, 69) 72.5%, rgb(232, 241, 247) 72.6%);;
     border-radius: 16px;
