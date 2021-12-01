@@ -2,15 +2,17 @@
 function formatDate(timestamp){
     let date = new Date(timestamp);
     
-        let days = ["Sunday", 
+    let day = days[date.getDay()];
+    let days = [
+        "Sunday", 
         "Monday", 
         "Tuesday", 
         "Wednesday", 
         "Thursday", 
         "Friday", 
         "Saturday", 
-        "Sunday"]
-    let day = days[date.getDay()];
+        "Sunday"
+    ]
     let hours = date.getHours();
         if (hours < 10) {
         hours = `0${hours}`;
@@ -23,7 +25,6 @@ function formatDate(timestamp){
 }
 // temperature
 function displayTemperature(response){
-    console.log(response.data);
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#description").innerHTML = response.data.weather[0].description;
