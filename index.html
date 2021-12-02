@@ -22,9 +22,7 @@
     <div class="container">
       <div class="weather-app">
         <form id="search-form">
-          <!-- Grid row -->
           <div class="row">
-            <!-- Grid column -->
             <div class="col-md-1">
               <button
                 type="button"
@@ -38,7 +36,7 @@
             <div class="col-md-6">
               <input
                 type="search"
-                placeholder="Enter a city e.g. London"
+                placeholder="Enter a city 🔍"
                 autofocus="on"
                 autocomplete="off"
                 class="form-control"
@@ -73,7 +71,8 @@
               <span class="class float-left">
                 <strong id="temperature"></strong
                 ><span class="units"
-                  >°C | <a href="#" class="imperial-unit">°F</a></span
+                  ><a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a></span
                 >
               </span>
             </div>
