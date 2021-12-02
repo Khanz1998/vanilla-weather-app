@@ -69,3 +69,23 @@ document.querySelector("#search-form").addEventListener("submit", handleSubmit);
 
 // search for city on load
 search("London");
+
+// current location function
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "metric";
+  let apiKey = "4da08b1db69b24980b23530bbc9ed41a";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiUrl = `${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+// current location feature
+let locationBtn = document.querySelector("#location-btn");
+locationBtn.addEventListener("click", getCurrentPosition);
