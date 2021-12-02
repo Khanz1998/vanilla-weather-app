@@ -1,70 +1,77 @@
 body {
-    font-family: "Josefin Sans", sans-serif;
-    background:#FDEEEB;
+  font-family: "Josefin Sans", sans-serif;
+  background: #fdeeeb;
 }
 h1 {
-    box-sizing: border-box;
-    color: rgb(62, 111, 170);
-    display: block;
-    flex-shrink: 0;
-    font-size: 38px;
-    font-weight: 300px;
-    height: 45px;
-    line-height:45px;
-    padding: 0px 12px 0px 12px;
-    margin: 0px 0px 10px 0px;
-    text-align: start;
-    text-size-adjust: 100%;
-    text-shadow: 5px 5px 10px rgba(69, 74, 66, 0.4);
-    width: 444px;
+  box-sizing: border-box;
+  color: rgb(62, 111, 170);
+  display: block;
+  flex-shrink: 0;
+  font-size: 38px;
+  font-weight: 300px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0px 12px 0px 12px;
+  margin: 0px 0px 10px 0px;
+  text-align: start;
+  text-size-adjust: 100%;
+  text-shadow: 5px 5px 10px rgba(69, 74, 66, 0.4);
+  width: 444px;
 }
 ul {
-    padding: 0px 12px 0px 12px;
-    margin: 0px 0px 0px 0px;
+  padding: 0px 12px 0px 12px;
+  margin: 0px 0px 0px 0px;
 }
 li {
-    color: rgb(62, 111, 170);
-    display: block;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    list-style: none;
-    margin-bottom: 5px;
+  color: rgb(62, 111, 170);
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: none;
+  margin-bottom: 5px;
 }
 li:first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 small {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 11px;
-    display: block;
-    margin-top: 0;
-    line-height: 10px;
-    text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  display: block;
+  margin-top: 0;
+  line-height: 10px;
+  text-align: center;
 }
-.search-form, .search-form * {
-    box-sizing: content-box;
+.form-control {
+  background-color: #fcedea;
 }
 
 .weather-app {
-    background: radial-gradient(263px at 100.2% 3%, rgb(12, 85, 141) 31.1%, rgb(205, 181, 93) 36.4%, rgb(244, 102, 90) 50.9%, rgb(199, 206, 187) 60.7%, rgb(249, 140, 69) 72.5%, rgb(217, 236, 247) 72.6%);;
-    border-radius: 16px;
-    box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-    color: #878787;
-    margin: 30px auto;
-    max-width: 650px; 
-    padding: 40px;   
+  background: radial-gradient(
+    263px at 100.2% 3%,
+    rgb(12, 85, 141) 31.1%,
+    rgb(205, 181, 93) 36.4%,
+    rgb(244, 102, 90) 50.9%,
+    rgb(199, 206, 187) 60.7%,
+    rgb(249, 140, 69) 72.5%,
+    rgb(217, 236, 247) 72.6%
+  );
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  color: #878787;
+  margin: 30px auto;
+  max-width: 650px;
+  padding: 40px;
 }
 .overview {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .weather-temperature img {
-    margin-bottom: 30px;
-    margin-right: 5px;
-    height: 64px;
-    width: 64px;
-    
+  margin-bottom: 30px;
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
 }
 .weather-temperature strong {
   font-size: 64px;
@@ -72,14 +79,13 @@ small {
   font-weight: 400;
 }
 .weather-temperature .units {
-    position: relative;
-    font-size: 16px;
-    top: -32px;
+  position: relative;
+  font-size: 16px;
+  top: -32px;
 }
 .weather-temperature .imperial-unit {
-    text-decoration: none;
+  text-decoration: none;
 }
 .personal-details:hover {
-    color:rgb(62, 111, 170);;
-
+  color: rgb(62, 111, 170);
 }
