@@ -26,8 +26,8 @@ function formatDate(timestamp) {
 // temperature
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
   celsiusTemp = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
@@ -101,11 +101,13 @@ let celsiusTemp = null;
 // current location
 let locationBtn = document.querySelector("#location-btn");
 locationBtn.addEventListener("click", getCurrentPosition);
-// search for city on load
-search("London");
+
 // unit conversion
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+// search for city on load
+search("London");
