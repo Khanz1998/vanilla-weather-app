@@ -67,6 +67,9 @@ small {
 .overview {
   margin-bottom: 10px;
 }
+.overview .description {
+  margin-bottom: 25px;
+}
 .weather-temperature img {
   margin-bottom: 30px;
   margin-right: 5px;
@@ -98,4 +101,26 @@ small {
 }
 .fahrenheit-link:hover {
   color: #f36759;
+}
+
+.weather-forecast {
+  color: rgb(62, 111, 170);
+  margin: 10px 0px 30px 0px;
+  text-align: center;
+}
+.weather-forecast .icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+.weather-forecast-low-temperature {
+  opacity: 0.8;
 }
