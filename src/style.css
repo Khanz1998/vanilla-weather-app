@@ -91,7 +91,7 @@ small {
 }
 .celsius-link {
   text-decoration: none;
-  color: rgb(62, 111, 170);
+  color: #6c757d;
 }
 .celsius-link:hover {
   color: #f36759;
