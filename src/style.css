@@ -89,3 +89,13 @@ small {
 .personal-details:hover {
   color: rgb(62, 111, 170);
 }
+.celsius-link {
+  text-decoration: none;
+  color: rgb(62, 111, 170);
+}
+.celsius-link:hover {
+  color: #f36759;
+}
+.fahrenheit-link:hover {
+  color: #f36759;
+}
