@@ -96,9 +96,6 @@ small {
   text-decoration: none;
   color: #6c757d;
 }
-.celsius-link:hover {
-  color: #f36759;
-}
 .fahrenheit-link:hover {
   color: #f36759;
 }
@@ -122,5 +119,5 @@ small {
   font-size: 13px;
 }
 .weather-forecast-low-temperature {
-  opacity: 0.8;
+  opacity: 0.7;
 }

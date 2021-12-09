@@ -23,6 +23,35 @@ function formatDate(timestamp) {
   }
   return `${day}, ${hours}:${minutes}`;
 }
+// weather forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/931/original/sunny.png?1638278675"
+                alt="sun illustration"
+                class="icon"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-high-temperature"> 18° </span>
+                <span class="weather-forecast-low-temperature"> 12° </span>
+              </div>
+            </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // temperature
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -111,3 +140,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 // search for city on load
 search("London");
+displayForecast();
