@@ -23,33 +23,63 @@ function formatDate(timestamp) {
   }
   return `${day}, ${hours}:${minutes}`;
 }
-// weather forecast
-function displayForecast() {
+
+// forecast day function
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  return days[day];
+}
+
+// weather forecast function
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
             <div class="col-2">
-              <div class="weather-forecast-date">${day}</div>
+              <div class="weather-forecast-date">${formatDay(
+                forecastDay.dt
+              )}</div>
               <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/931/original/sunny.png?1638278675"
+                src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
                 alt="sun illustration"
                 class="icon"
               />
               <div class="weather-forecast-temperature">
-                <span class="weather-forecast-high-temperature"> 18° </span>
-                <span class="weather-forecast-low-temperature"> 12° </span>
+                <span class="weather-forecast-high-temperature"> ${Math.round(
+                  forecastDay.temp.max
+                )}° </span>
+                <span class="weather-forecast-low-temperature"> ${Math.round(
+                  forecastDay.temp.min
+                )}° </span>
               </div>
             </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+// forecast function
+function getForecast(coordinates) {
+  let apiKey = "4da08b1db69b24980b23530bbc9ed41a";
+  let units = "metric";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/onecall";
+  let apiUrl = `${apiEndpoint}?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // temperature
@@ -78,6 +108,8 @@ function displayTemperature(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", `${response.data.weather[0].description} icon`);
+
+  getForecast(response.data.coord);
 }
 
 // search engine
@@ -140,4 +172,3 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 // search for city on load
 search("London");
-displayForecast();
