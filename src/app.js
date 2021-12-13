@@ -123,7 +123,7 @@ function search(city) {
     .get(apiUrl)
     .then(displayTemperature)
     .catch(function error() {
-      alert("city not found");
+      alert("City not found 🧐 Try searching again ...");
     });
 }
 
