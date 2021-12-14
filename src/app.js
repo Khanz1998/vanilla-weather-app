@@ -150,31 +150,9 @@ function getCurrentPosition(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-// unit conversion
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let fahrenheitTemp = Math.round(celsiusTemp * 1.8 + 32);
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-// GLOBAL VARIABLES
-// celsius
-let celsiusTemp = null;
 // current location
 let locationBtn = document.querySelector("#location-btn");
 locationBtn.addEventListener("click", getCurrentPosition);
 
-// unit conversion
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
-
-// search for city on load
+// Global variable
 search("London");
