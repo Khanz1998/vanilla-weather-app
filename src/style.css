@@ -1,6 +1,6 @@
 body {
-  font-family: "Josefin Sans", sans-serif;
   background: #fdeeeb;
+  font-family: "Josefin Sans", sans-serif;
 }
 h1 {
   box-sizing: border-box;
@@ -11,16 +11,16 @@ h1 {
   font-weight: 300px;
   height: 45px;
   line-height: 45px;
-  padding: 0px 12px 0px 12px;
   margin: 0px 0px 10px 0px;
+  padding: 0px 12px 0px 12px;
   text-align: start;
   text-size-adjust: 100%;
   text-shadow: 5px 5px 10px rgba(69, 74, 66, 0.4);
   width: 444px;
 }
 ul {
-  padding: 0px 12px 0px 12px;
   margin: 0px 0px 0px 0px;
+  padding: 0px 12px 0px 12px;
 }
 li {
   color: rgb(62, 111, 170);
@@ -36,11 +36,12 @@ li:first-letter {
 }
 
 small {
+  color: #5d5d5e;
+  display: block;
   font-family: "Courier New", Courier, monospace;
   font-size: 11px;
-  display: block;
-  margin-top: 0;
   line-height: 10px;
+  margin-top: 0;
   text-align: center;
 }
 .form-control {
@@ -78,12 +79,12 @@ small {
 }
 .weather-temperature strong {
   font-size: 64px;
-  line-height: 64px;
   font-weight: 400;
+  line-height: 64px;
 }
 .weather-temperature .units {
-  position: relative;
   font-size: 16px;
+  position: relative;
   top: -32px;
 }
 .weather-temperature .imperial-unit {
@@ -92,14 +93,6 @@ small {
 .personal-details:hover {
   color: rgb(62, 111, 170);
 }
-.celsius-link {
-  text-decoration: none;
-  color: #6c757d;
-}
-.fahrenheit-link:hover {
-  color: #f36759;
-}
-
 .weather-forecast {
   color: rgb(26, 53, 87);
   margin: 10px 0px 30px 0px;
